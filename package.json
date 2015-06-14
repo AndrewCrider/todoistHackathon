@@ -6,7 +6,8 @@
   "dependencies":{
   	"express":"*",
   	"xml2js":"*",
-    "body-parser":"*"
+    "body-parser":"*",
+    "request":"*"
 
   	},
   "scripts": {

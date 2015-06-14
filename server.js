@@ -3,7 +3,11 @@
 
 var express = require('express'),
     app = express(),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    admin = require('./controllers/admin'),
+    todoist = require('./controllers/todoist'),
+    https = require('https'),
+    request = require('request'); 
 
 
 
@@ -18,8 +22,13 @@ var express = require('express'),
  	res.sendStatus(501);
  }
 
-app.get('/test', function (req, res){
 
-	res.send('Your Momma comes here');
-});
+app.get('/webhookresponse', admin.webhook);
+
+app.get('/test/:level', admin.test);
+app.get('/addTask/:content/:project_id/:date_string', todoist.addTask);
+
+
+
+
  app.listen(8080);
