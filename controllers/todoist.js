@@ -1,7 +1,8 @@
 
 
 var https = require ('https'),
-    request = require ('request');
+    request = require ('request'),
+    uuid = require ('uuid');
 
 
 // Created on 2015-06-14 by Andrew Crider
@@ -13,12 +14,14 @@ var https = require ('https'),
 //Remaining Tasks Finish constructing arguments
 
 
-/*module.exports.addTask = function(req, response){
+module.exports.addTask = function(req, response){
 
 var taskTitle = req.params.content,
     project = req.params.project_id,
-    date = req.params.date_string
-    type = 'item_add';
+    date = req.params.date_string,
+    type = 'item_add',
+    genUUID = uuid.v4(),
+    genTempId = uuid.v4();
 
 	
 	var postOptions = {
@@ -26,11 +29,8 @@ var taskTitle = req.params.content,
 		method: 'POST',
 		form: {
 			token: '76ea35efc079408c3f2ae5cb077cf283d87f52d0',
-			commands: '[{"type":' + type + ', "args" : {"content" : ' + taskTitle + 
-			type: type,
-			content: taskTitle,
-			project_id: project,
-			date_string: date,
+			commands: '[{"type": "' + type + '", "temp_id": "'+ genTempId + '" , "uuid": "'+ genUUID + '" , "args" : {"content" : "' + taskTitle + '" ,"project_id" : "' + project 
+			                      + '", "date_string": "' + date + '"}}]'
 			
 		}
 	};
@@ -51,4 +51,4 @@ request(postOptions, function(error, res, body){
 	});
 
 
-};*/
+};
