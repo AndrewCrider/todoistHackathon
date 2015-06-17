@@ -9,6 +9,9 @@
     "body-parser":"*",
     "request":"*",
     "uuid":"*"
+    "uuid":"*",
+    "edit-google-spreadsheet":"*",
+    "oauth2-server":"*"
 
   	},
   "scripts": {
