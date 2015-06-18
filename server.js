@@ -6,6 +6,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     admin = require('./controllers/admin'),
     todoist = require('./controllers/todoist'),
+    gdocs = require('./controllers/gdocs'),
     https = require('https'),
     request = require('request'); 
 
@@ -27,6 +28,7 @@ app.get('/webhookresponse', admin.webhook);
 
 app.get('/test/:level', admin.test);
 app.get('/addTask/:content/:project_id/:date_string', todoist.addTask);
+app.get('/gdocs', gdocs.getGTasks);
 
 
 
