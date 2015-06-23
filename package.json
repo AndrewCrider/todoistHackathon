@@ -10,7 +10,8 @@
     "request":"*",
     "uuid":"*",
     "edit-google-spreadsheet":"*",
-    "oauth2-server":"*"
+    "oauth2-server":"*",
+    "jade":"*"
 
   	},
   "scripts": {

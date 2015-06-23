@@ -8,7 +8,8 @@ var express = require('express'),
     todoist = require('./controllers/todoist'),
     gdocs = require('./controllers/gdocs'),
     https = require('https'),
-    request = require('request'); 
+    request = require('request'),
+    jade = require('jade'); 
 
 
 
@@ -18,6 +19,9 @@ var express = require('express'),
 
  app.use(bodyParser.json());
 
+ app.set('view engine', 'jade');
+
+
 
  var notImplemented = function (req, res){
  	res.sendStatus(501);
@@ -26,7 +30,9 @@ var express = require('express'),
 
 app.get('/webhookresponse', admin.webhook);
 
-app.get('/test/:level', admin.test);
+app.get('/test/', function (req, res){
+	res.render('teststuff/index');
+});
 app.get('/addTask/:content/:project_id/:date_string', todoist.addTask);
 app.get('/gdocs', gdocs.getGTasks);
 
