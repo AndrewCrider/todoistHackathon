@@ -32,7 +32,9 @@ app.get('/webhookresponse', admin.webhook);
 
 app.get('/test/', function (req, res){
 	res.render('teststuff/index');
+
 });
+app.post('/gtest', gdocs.appendGTasks);
 app.get('/addTask/:content/:project_id/:date_string', todoist.addTask);
 app.get('/gdocs', gdocs.getGTasks);
 
