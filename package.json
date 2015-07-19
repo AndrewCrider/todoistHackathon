@@ -11,7 +11,9 @@
     "uuid":"*",
     "edit-google-spreadsheet":"*",
     "oauth2-server":"*",
-    "jade":"*"
+    "jade":"*",
+    "mysql":"*",
+    "date-format":"*"
 
   	},
   "scripts": {

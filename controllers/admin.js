@@ -29,7 +29,7 @@ module.exports.test = function(req, response){
 		}
 	};
 
-	console.log(postOptions.form);
+	
 
 request(postOptions, function(error, res, body){
 		if(error){
@@ -40,4 +40,16 @@ request(postOptions, function(error, res, body){
 		}
 
 	});
+};
+
+// Created on 2015-06-14 by Andrew Crider
+// Copyright Andrew/Matt
+//Description: Add a Task
+//Remaining Tasks NA
+
+module.exports.addTask = function(req, res){
+
+
+
+
 };

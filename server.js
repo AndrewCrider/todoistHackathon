@@ -7,6 +7,7 @@ var express = require('express'),
     admin = require('./controllers/admin'),
     todoist = require('./controllers/todoist'),
     gdocs = require('./controllers/gdocs'),
+    sql = require('./controllers/mySQLtasks'),
     https = require('https'),
     request = require('request'),
     jade = require('jade'); 
@@ -37,6 +38,7 @@ app.get('/test/', function (req, res){
 app.post('/gtest', gdocs.appendGTasks);
 app.get('/addTask/:content/:project_id/:date_string', todoist.addTask);
 app.get('/gdocs', gdocs.getGTasks);
+app.get('/tasks', sql.tasks);
 
 
 
