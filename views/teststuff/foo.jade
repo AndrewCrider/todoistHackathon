@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+	div(class="bs-docs-header")
+		div(class="container")
+			h1 This is a freaking test
+
+	div(id="multiChartContainer", class="container")
+	br
+	div(id="pieContainer", class="container")
+		div(class="row", id="pieRow1")
+			div(class="col-md-2" id="sprintNameContainer")
+			div(class="col-md-5" id="sprintNamePieContainer")
+			div(class="col-md-5" id="sprintBreakdownPieContainer")
+		div(class="row")
+			br
+		div(class="row show-grid", id="pieRow2")
+			div(class="col-md-2" id="devNameContainer")
+			div(class="col-md-5" id="devNamePieContainer")
+			div(class="col-md-5" id="emptyPieContainer")
+
+	script(src="http://code.highcharts.com/highcharts.js")
+	script(src="http://code.highcharts.com/modules/exporting.js")
+	script
+		include test.js
+

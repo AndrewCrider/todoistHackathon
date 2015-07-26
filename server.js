@@ -31,16 +31,19 @@ var express = require('express'),
 
 app.get('/webhookresponse', admin.webhook);
 
-app.get('/test/', function (req, res){
-	res.render('teststuff/index');
 
-});
 app.post('/gtest', gdocs.appendGTasks);
 app.get('/addTask/:content/:project_id/:date_string', todoist.addTask);
 app.get('/gdocs', gdocs.getGTasks);
 app.get('/tasks', sql.tasks);
+app.get('/test/', function (req, res){
+    res.render('teststuff/index');
+});
 
+app.get('/foo/', function (req, res){
+    res.render('teststuff/foo');
 
+});
 
 
  app.listen(8080);

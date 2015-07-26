@@ -4,13 +4,13 @@
 //Remaining Tasks ????
 
 
-var spreadsheet = require('edit-google-spreadsheet');
+var Spreadsheet = require('edit-google-spreadsheet');
 
 module.exports.getGTasks = function (req,res){
 
 
 
-spreadsheet.load({
+Spreadsheet.load({
 	debut: true,
 	spreadsheetId: '1B__2MkBDxsc0HCaiO01rkeqsZq3SvsZGq8qyDWk-7cM',
 	worksheetName: 'Sheet1',
